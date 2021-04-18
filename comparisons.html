@@ -1,15 +1,16 @@
+<!--must use bootstrap grid for responsiveness -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>Latitude</title>
+  <title>Bootstrap Components</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html">Latitude</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -44,58 +45,35 @@
   </nav>
 
   <div class="container">
-    <div class="row mt-4">
-      <h1>Comparison: Latitude vs. ________ </h1>
-    </div>
-  </div>
-  <div class="container">
     <div class="row">
-      <div class="col-md-8 col-sm-12">
-        <img src="../lydiacjones.github.io/Resources/assets/images/Fig1.png" class="img-fluid" alt="Example Graph">
+      <div class="col-sm-12 col-md-6">
+        <h1>Maximum Temperature</h1>
+        <img src="../lydiacjones.github.io/Resources/assets/images/Fig1.png" class="img-fluid" alt="Max Temp" width="600">
+        After performing linear regression between max temp vs. latitude, the results were plotted using matplotlib.  This scatter plot showing temperature against latitude shows a clear trend of decreasing average temperature moving away from the equator. Among the various analyses we did, max temp presented the clearest correlation with latitude. 
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <h1>Humidity</h1>
+        <img src="../lydiacjones.github.io/Resources/assets/images/Fig2.png" class="img-fluid" alt="Humidity" width="600">
 
-        <p> The goal of this project was to analyze various weather patterns in relation to latitude. The original analysis was done using linear regression and matplotlib in Jupyter Notebooks to analyze data of 500+ cities from the OpenWeather API. The following relationships were analyzed and are available to the right and in the dropdown menu:
-          <li>Temperature (F) vs. Latitude</li>
-          <li>Humidity (%) vs. Latitude</li> 
-          <li>Cloudiness (%) vs. Latitude</li>
-          <li>Wind Speed (mph) vs. Latitude</li>
+        <p> The relationship between latitude and humidity is not as noticeable, but it does tend to show that it is consistently more humid closer to the equator. As you move away from the equator, there is a lot of scatter in humidity values. Of all the relationships, this is the loosest.
         </p>
       </div>
-      <div class="col-md-2 col-sm-6">
-        <p><a href="maxtemp.html">
-          <img alt="Max Temp" src="../lydiacjones.github.io/Resources/assets/images/Fig1.png" width="200" class="img-fluid" >
-          </a>
+      <div class="col-sm-12 col-md-6">
+        <h1>Cloudiness</h1>
+        <img src="../lydiacjones.github.io/Resources/assets/images/Fig3.png" class="img-fluid" alt="Cloudiness" width="600">
+
+        <p>  When comparing these two attributes, there really does not appear to be a correlation between latitude and cloudiness. What you do notice is how weathermen tend to round to the nearest 10 or 5%, giving the appearance of clusters around 0%, 20%, 40%, 75%, and 100% cloudiness. That feature in the data prevents it from being easily analyzed - there is likely a lot of error when the values are rounded to the nearest 5 or 10%.
         </p>
-        <div class="caption">
-          <h3>Max Temp</h>
-        </div>
-        <p><a href="humidity.html">
-          <img alt="Humidity" src="../lydiacjones.github.io/Resources/assets/images/Fig2.png" width="200" class="img-fluid" >
-          </a>
-        </p>
-        <div class="caption">
-          <h3>Humidity</h>
-        </div>
       </div>
-      <div class="col-md-2 col-sm-6">
-        <p><a href="cloudiness.html">
-          <img alt="Cloudiness" src="../lydiacjones.github.io/Resources/assets/images/Fig3.png" width="200" class="img-fluid"  >
-          </a>
+      <div class="col-sm-12 col-md-6">
+        <h1>Windiness</h1>
+        <img src="../lydiacjones.github.io/Resources/assets/images/Fig4.png" class="img-fluid" alt="Windiness" width="600">
+
+        <p>   Based off the analysis, wind speeds might be more variable as you move away from the equator, but there is not a great correlation. You might be able to confirm this trend by pulling a few sets of cities and seeing if the shape of this graph is reproduceable.
         </p>
-        <div class="caption">
-          <h3>Cloudiness</h>
-        </div>
-        <p><a href="windiness.html">
-          <img alt="Windiness" src="../lydiacjones.github.io/Resources/assets/images/Fig4.png" width="200" class="img-fluid" >
-          </a>
-        </p>
-        <div class="caption">
-          <h3>Windiness</h>
-        </div>
-      </div>
       </div>
     </div>
-  </div>
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
