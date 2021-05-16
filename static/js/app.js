@@ -100,8 +100,10 @@ function getMeta(id) {
 
         //grab the tag for the metadata panel in the index.html
         var demInfo = d3.select("#sample-metadata");
+        
+        demInfo.html("")
 
-        console.log(demInfo)
+        console.log("demInfo", demInfo)
         
         //append on entries for each sample
         Object.entries(results).forEach((entry) => { 
